@@ -1,0 +1,46 @@
+$primary: black;
+$secondary: orange;
+$text-light: white;
+$text-dark: black;
+
+header {
+  display: grid;
+  grid-template:
+    'logo nav' 4rem
+    / 1fr 3fr;
+  background-color: blue;
+  nav {
+    grid-area: nav;
+    align-self: center;
+    justify-self: flex-end;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 4rem;
+        cursor: pointer;
+      }
+      li:hover {
+        color: $text-light;
+        background-color: green;
+      }
+    }
+  }
+  #logo-and-title {
+    grid-area: logo;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h1 {
+      margin: 0;
+    }
+  }
+}
