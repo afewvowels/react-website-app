@@ -1,14 +1,16 @@
-$primary: black;
-$secondary: orange;
-$text-light: white;
-$text-dark: black;
+@import './_Constants.scss';
+
 
 header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: grid;
   grid-template:
-    'logo nav' 4rem
-    / 1fr 3fr;
-  background-color: blue;
+    'logo nav' 5rem
+    / 1fr 1fr;
+  background-color: transparent;
   nav {
     grid-area: nav;
     align-self: center;
@@ -26,10 +28,28 @@ header {
         width: 5rem;
         height: 4rem;
         cursor: pointer;
+        color: $text-light;
+        position: relative;
+        a {
+          position: relative;
+          span::after {
+            content: '';
+            height: .15rem;
+            width: 0;
+            bottom: -.15rem;
+            left: 0;
+            background-color: $text-light;
+            position: absolute;
+            transition: .25s width ease-in;
+          }
+        }
       }
       li:hover {
-        color: $text-light;
-        background-color: green;
+        a {
+          span::after {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -39,8 +59,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 1rem;
+    .logo {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: .75rem;
+      border-radius: 50%;
+      background-image: linear-gradient($tertiary, $tertiary-gradient);
+      color: $text-light;
+    }
     h1 {
-      margin: 0;
+      margin: 0 0 0 1rem;
+      color: $text-light;
     }
   }
 }

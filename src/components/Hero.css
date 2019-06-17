@@ -1,0 +1,25 @@
+.slider-wrapper {
+  width: 100vw;
+  height: 100vh; }
+
+.slider {
+  width: 100vw;
+  height: 100vh; }
+
+.slide {
+  width: 100vw;
+  height: 100vh; }
+
+.slider-image {
+  width: 100vw !important;
+  height: 100vh !important;
+  background-position: center;
+  background-size: cover; }
+
+.slide-image-bottom-anchor {
+  background-position: bottom; }
+
+.button-back, .button-forward {
+  position: absolute;
+  top: 0;
+  z-index: 10; }

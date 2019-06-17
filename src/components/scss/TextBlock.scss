@@ -1,0 +1,25 @@
+@import './_Constants.scss';
+
+.text-block-wrapper {
+  margin: 3rem;
+  color: $text-light;
+  display: grid;
+  grid-template:
+    'content inset' auto
+    / 3fr 2fr;
+  grid-column-gap: 3rem;
+  .main-content {
+    grid-area: content;
+    .text-block-heading {
+      font-size: 2rem;
+      margin: 0 0 1rem 0;
+      padding: 0;
+    }
+    .text-block-body {
+      margin: 0 0 1rem 0;
+    }
+  }
+  .inset-wrapper {
+    grid-area: inset;
+  }
+}

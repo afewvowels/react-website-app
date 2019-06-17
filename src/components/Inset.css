@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+.inset-wrapper {
+  padding: 1rem 3rem;
+  background-color: #FF6F91;
+  color: white;
+  box-sizing: border-box;
+  border: 8px solid white; }

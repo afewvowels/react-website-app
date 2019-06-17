@@ -1,0 +1,10 @@
+@import'./_Constants.scss';
+
+.inset-wrapper {
+  padding: 1rem 3rem;
+  // margin: 1.5rem;
+  background-color: $secondary;
+  color: $text-light;
+  box-sizing: border-box;
+  border: 8px solid white;
+}
